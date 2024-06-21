@@ -17,6 +17,12 @@ const schema = yup
   })
   .required();
 
+
+const botao = () => {
+
+  console.log("deu certo")
+}
+
 const Login = () => {
   const {
     control,
@@ -49,7 +55,7 @@ const Login = () => {
             errorMessage={errors?.password?.message}
           />
           <Spacing />
-          <Button title="Entrar" />
+          <Button title="Entrar" disabled={!isValid} onClick={botao}/>
         </Column>
       </LoginContainer>
     </Container>
